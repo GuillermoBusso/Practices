@@ -1,0 +1,31 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import tkinter as tk
+
+def boton_presionado():
+	print("Hola mundo")
+	print(nombre_alumno.get(), apellido_alumno.get() )
+
+# programa principal....
+ventana = tk.Tk()
+ventana.config(width=700, height=300)
+ventana.title("Primera aplicación de escritorio")
+
+boton = tk.Button(text="Imprimir", command = boton_presionado)
+boton.place(x=20, y=200, width=100, height=30)
+#-------------------
+etiqueta_nombre = tk.Label(text="Ingresa tu nombre:")
+etiqueta_nombre.place(x=20, y=30)
+
+nombre_alumno = tk.Entry()
+nombre_alumno.place(x=20, y=60, width=200, height=25)
+#-------------------
+etiqueta_apellido = tk.Label(text="Ingresa tu apellido:")
+etiqueta_apellido.place(x=20, y=90)
+
+apellido_alumno = tk.Entry()
+apellido_alumno.place(x=20, y=120, width=200, height=25)
+
+
+ventana.mainloop()
